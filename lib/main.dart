@@ -1,4 +1,5 @@
 import 'package:fluent/pages/splash_screen.dart';
+import 'package:fluent/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
+      defaultTransition: Transition.fadeIn,
+      getPages: AppRoutes.pages,
+      initialRoute: AppRoutes.splashPage,
     );
   }
 }

@@ -1,5 +1,8 @@
+import 'package:fluent/pages/dashboard.dart';
 import 'package:fluent/res/colors.dart';
+import 'package:fluent/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -20,6 +23,15 @@ class _SplashScreenState extends State<SplashScreen>
       duration: const Duration(milliseconds: 1500),
       vsync: this,
     )..forward();
+
+    _navigateToHome();
+  }
+
+  void _navigateToHome() async {
+    await Future.delayed(const Duration(seconds: 3));
+    if (mounted) {
+      Get.offAllNamed(AppRoutes.dashboardPage);
+    }
   }
 
   @override
