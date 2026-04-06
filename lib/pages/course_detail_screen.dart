@@ -48,7 +48,7 @@ class CourseDetailScreen extends StatelessWidget {
                   Text(
                     course.title,
                     style: const TextStyle(
-                      fontSize: 22,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

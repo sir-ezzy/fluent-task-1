@@ -1,17 +1,36 @@
-class Course {
+import 'package:hive/hive.dart';
+
+part 'course_model.g.dart';
+
+@HiveType(typeId: 0)
+class Course extends HiveObject {
+  @HiveField(0)
   final int id;
+  @HiveField(1)
   final String title;
+  @HiveField(2)
   final String description;
+  @HiveField(3)
   final String instructor;
+  @HiveField(4)
   final String instructorAvatar;
+  @HiveField(5)
   final String category;
+  @HiveField(6)
   final String level;
+  @HiveField(7)
   final String duration;
+  @HiveField(8)
   final double price;
+  @HiveField(9)
   final double rating;
+  @HiveField(10)
   final int students;
+  @HiveField(11)
   final String image;
+  @HiveField(12)
   final List<String> tags;
+  @HiveField(13)
   final DateTime createdAt;
 
   Course({
@@ -48,24 +67,5 @@ class Course {
       tags: List<String>.from(json['tags']),
       createdAt: DateTime.parse(json['createdAt']),
     );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'title': title,
-      'description': description,
-      'instructor': instructor,
-      'instructorAvatar': instructorAvatar,
-      'category': category,
-      'level': level,
-      'duration': duration,
-      'price': price,
-      'rating': rating,
-      'students': students,
-      'image': image,
-      'tags': tags,
-      'createdAt': createdAt.toIso8601String(),
-    };
   }
 }

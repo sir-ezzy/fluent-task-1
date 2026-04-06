@@ -1,4 +1,4 @@
-import 'package:fluent/pages/dashboard.dart';
+import 'package:fluent/pages/dashboard_screen.dart';
 import 'package:fluent/res/colors.dart';
 import 'package:fluent/routes/app_routes.dart';
 import 'package:flutter/material.dart';

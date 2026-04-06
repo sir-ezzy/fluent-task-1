@@ -1,5 +1,5 @@
 import 'package:fluent/model/course_model.dart';
-import 'package:fluent/services/course_api.dart';
+import 'package:fluent/services/course_api_service.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
 
@@ -8,6 +8,7 @@ class CourseController extends GetxController {
   var courseList = <Course>[].obs;
   var isLoading = false.obs;
   var errorMessage = ''.obs;
+  var searchQuery = ''.obs;
 
   @override
   void onInit() {
@@ -15,12 +16,27 @@ class CourseController extends GetxController {
     fetchCourses();
   }
 
-  Future<void> fetchCourses({String? category, String? search}) async {
+  List<Course> get filteredCourses {
+    if (searchQuery.value.trim().isEmpty) {
+      return courseList;
+    }
+
+    final query = searchQuery.value.toLowerCase().trim();
+
+    return courseList.where((course) {
+      return course.title.toLowerCase().contains(query) ||
+          course.instructor.toLowerCase().contains(query) ||
+          course.category.toLowerCase().contains(query);
+    }).toList();
+  }
+
+  // Fetch all courses from JSON
+  Future<void> fetchCourses() async {
     isLoading.value = true;
     errorMessage.value = '';
 
     try {
-      final courses = await _api.getCourses(category: category, search: search);
+      final courses = await _api.getCourses();
       courseList.value = courses;
     } catch (e) {
       errorMessage.value = "Failed to load courses";
@@ -29,6 +45,14 @@ class CourseController extends GetxController {
     } finally {
       isLoading.value = false;
     }
+  }
+
+  void searchCourses(String query) {
+    searchQuery.value = query;
+  }
+
+  void clearSearch() {
+    searchQuery.value = '';
   }
 
   Future<Course?> getCourseDetail(int id) async {

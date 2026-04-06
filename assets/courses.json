@@ -1,0 +1,68 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Complete Web Development Bootcamp 2026",
+      "description": "Master modern web development from zero to professional level. This comprehensive bootcamp covers HTML5, CSS3, JavaScript (ES6+), responsive design, Git & GitHub, React.js, Next.js 15, Node.js, Express, MongoDB, REST APIs, authentication, deployment, and DevOps basics. You'll build 12+ real-world projects including e-commerce platforms, social media apps, dashboards, and SaaS products.",
+      "instructor": "Sarah Chen",
+      "instructorAvatar": "https://i.pravatar.cc/150?u=sarah",
+      "category": "Web Development",
+      "level": "Beginner",
+      "duration": "12 hours",
+      "price": 120000,
+      "rating": 4.5,
+      "students": 12450,
+      "image": "https://www.upwork.com/catalog-images-resized/2d89bf18f704f0fe8cb41a81b10a3770/large",
+      "tags": ["React", "Node.js", "Fullstack", "Next.js"],
+      "createdAt": "2026-03-15"
+    },
+    {
+      "id": 2,
+      "title": "Python for Data Science & Machine Learning",
+      "description": "Become a proficient data scientist with this in-depth Python course. Learn Python fundamentals, data analysis with Pandas and NumPy, data visualization using Matplotlib & Seaborn, statistical analysis, machine learning algorithms. Build real-world projects like stock price prediction, customer segmentation, and recommendation systems. This course is perfect for beginners and intermediate learners looking to break into data science and machine learning.",
+      "instructor": "Dr. Michael Okoro",
+      "instructorAvatar": "https://i.pravatar.cc/150?u=michael",
+      "category": "Data Science",
+      "level": "Intermediate",
+      "duration": "15 hours",
+      "price": 150000,
+      "rating": 4.9,
+      "students": 8730,
+      "image": "https://i.ytimg.com/vi/w5nLK3Ux5m8/maxresdefault.jpg",
+      "tags": ["Python", "Machine Learning", "Data Science"],
+      "createdAt": "2026-02-20"
+    },
+    {
+      "id": 3,
+      "title": "UI/UX Design Masterclass with Figma",
+      "description": "Transform your design skills with this complete UI/UX Design Masterclass. Learn user research, wireframing, prototyping, interaction design, design systems. Master Figma to create stunning interfaces and seamless user experiences. Build a professional portfolio with real-world projects and get career guidance to land your dream design job.",
+      "instructor": "Aisha Bello",
+      "instructorAvatar": "https://i.pravatar.cc/150?u=aisha",
+      "category": "Design",
+      "level": "Beginner",
+      "duration": "13 hours",
+      "price": 200000,
+      "rating": 4.7,
+      "students": 5420,
+      "image": "https://itbox.id/wp-content/uploads/2023/02/what-is-ui-ux-design_11zon.jpeg",
+      "tags": ["Figma", "UI/UX", "Prototyping"],
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": 4,
+      "title": "Advanced React & Next.js 15",
+      "description": "Take your React skills to the expert level with this advanced course on React and Next.js 15. Deep dive into Server Components, Server Actions, App Router. Learn how to build high-performance, SEO-friendly web applications with the latest features of Next.js 15. This course is perfect for developers who already have a solid understanding of React and want to master the cutting-edge capabilities of Next.js.",
+      "instructor": "David Kim",
+      "instructorAvatar": "https://i.pravatar.cc/150?u=david",
+      "category": "Web Development",
+      "level": "Advanced",
+      "duration": "15 hours",
+      "price": 180000,
+      "rating": 4.9,
+      "students": 3290,
+      "image": "https://picsum.photos/id/180/800/600",
+      "tags": ["Next.js", "React", "TypeScript"],
+      "createdAt": "2026-03-01"
+    }
+  ]
+}
